@@ -1,7 +1,7 @@
-<p align="center"><img src="storage/app/public/logo-complete.png" width="400"></p>
+<p align="center"><img src="../storage/app/public/logo-complete.png" width="400"></p>
 
 <p align="center">
-[![Netlify Status](https://api.netlify.com/api/v1/badges/89375855-98c7-4016-af5b-575d6bbb1dd1/deploy-status)](https://app.netlify.com/sites/nervous-turing-dc585f/deploys)
+[[Netlify Status](https://api.netlify.com/api/v1/badges/89375855-98c7-4016-af5b-575d6bbb1dd1/deploy-status)](https://app.netlify.com/sites/nervous-turing-dc585f/deploys)
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
