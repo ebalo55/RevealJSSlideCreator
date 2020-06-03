@@ -17,32 +17,33 @@
   -->
 
 <template>
-    <nav class="top-nav">
-        <ul>
-            <li>
-                <a :href="urls[0].href">
-                    <img :src="urls[0].path" alt="Logo">
-                </a>
-            </li>
-            <li v-for="item in urls" :class="URLsPositionCheck(item)">
-                <a :href="item.href">{{ item.name }}</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="footer-wrapper">
+        <footer>
+            <a :href="urls[0].href">
+                <img :src="urls[0].complete_logo" alt="Logo">
+            </a>
+            <ul>
+                <li v-for="item in urls">
+                    <a :href="item.href">{{ item.name }}</a>
+                </li>
+                <li>
+                    <a href="https://raw.githubusercontent.com/ebalo55/RevealJSSlideCreator/master/LICENSE" target="_blank">License</a>
+                </li>
+            </ul>
+        </footer>
+        <span class="creator">
+            Made with <span class="fas fa-heart text-red-500"></span> by <a href="https://github.com/ebalo55" target="_blank">ebalo</a>
+        </span>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "NavBar",
+        name: "VFooter",
         props: {
             urls: {
                 type: Array,
-                required: true
-            }
-        },
-        methods: {
-            URLsPositionCheck: function(url) {
-                return url?.col ? `col-start-${url.col}` : null;
+                required: true,
             }
         }
     }

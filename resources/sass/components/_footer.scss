@@ -16,27 +16,48 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-.top-nav {
-    @apply flex px-64;
+.footer-wrapper {
+    @apply flex flex-col items-center justify-center;
     background: $carbon;
     color: #f1f1f1;
     font-size: 1.2em;
     font-weight: 600;
 
-    img {
-        @apply w-full h-16 object-contain;
-    }
+    footer {
+        @apply flex px-64;
 
-    ul {
-        @apply grid grid-cols-8 w-full h-20;
-    }
-
-    li {
         a {
-            @apply flex items-center justify-center h-full w-full p-2 transition duration;
+            @apply w-1/12 mr-16;
+
+            img {
+                @apply object-contain py-4;
+            }
+        }
+
+
+        ul {
+            @apply flex items-center w-5/6;
+        }
+
+        li {
+            a {
+                @apply flex items-center justify-center h-full w-full p-2 transition duration;
+
+                &:hover {
+                    background: $light-carbon;
+                }
+            }
+        }
+    }
+
+    .creator {
+        @apply mb-4;
+
+        a {
+            @apply text-blue-600 transition duration;
 
             &:hover {
-                background: $light-carbon;
+                @apply text-blue-400;
             }
         }
     }

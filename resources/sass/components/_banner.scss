@@ -16,28 +16,27 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-.top-nav {
-    @apply flex px-64;
-    background: $carbon;
-    color: #f1f1f1;
-    font-size: 1.2em;
-    font-weight: 600;
+.banner-pic {
+    @apply w-full relative;
+
+    &:before {
+        content: "";
+        @apply w-full h-full absolute select-none;
+        background: rgba(white, .5);
+    }
 
     img {
-        @apply w-full h-16 object-contain;
+        @apply select-none w-full;
     }
 
-    ul {
-        @apply grid grid-cols-8 w-full h-20;
-    }
+    .caption {
+        @apply absolute text-5xl font-bold;
+        color: $carbon;
+        top: 20%;
+        left: 20%;
 
-    li {
-        a {
-            @apply flex items-center justify-center h-full w-full p-2 transition duration;
-
-            &:hover {
-                background: $light-carbon;
-            }
+        .body {
+            @apply font-semibold text-2xl p-4;
         }
     }
 }

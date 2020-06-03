@@ -1,3 +1,21 @@
+/*!
+ *   Reveal JS Slide Creator
+ *   Copyright (C) 2020  ebalo <webdev.ebalo@gmail.com>
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -8,5 +26,35 @@
 @import "tailwind.css";                 // remove in production
 // @import "~tailwindcss/base.css";     // Uncomment in production
 
+* {
+    font-family: $font-family-sans-serif;
+}
+
 // Components
 @import "components/navbar";
+@import "components/banner";
+@import "components/footer";
+
+main {
+    @apply px-56 my-8;
+
+    section {
+        @apply py-4;
+
+        h2 {
+            @apply font-semibold text-3xl;
+        }
+
+        p {
+            @apply text-xl;
+        }
+
+        a {
+            @apply text-blue-500 transition duration;
+
+            &:hover {
+                @apply text-blue-700;
+            }
+        }
+    }
+}

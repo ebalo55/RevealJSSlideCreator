@@ -1,4 +1,4 @@
-{{--
+<!--
   -   Reveal JS Slide Creator
   -   Copyright (C) 2020  ebalo <webdev.ebalo@gmail.com>
   -
@@ -14,28 +14,32 @@
   -
   -  You should have received a copy of the GNU General Public License
   -   along with this program.  If not, see <https://www.gnu.org/licenses/>.
---}}
+  -->
 
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+<template>
+    <div class="banner-pic">
+        <img :src="picPath">
+        <h2 class="caption">
+            {{ captionTitle }}
+            <p class="body">
+                <slot></slot>
+            </p>
+        </h2>
     </div>
-</div>
-@endsection
+</template>
+
+<script>
+    export default {
+        name: "Banner",
+        props: {
+            picPath: {
+                type: String,
+                required: true
+            },
+            captionTitle: {
+                type: String,
+                default: ""
+            }
+        }
+    }
+</script>
