@@ -1,0 +1,26 @@
+.top-nav {
+    @apply flex px-64;
+    background: $carbon;
+    color: #f1f1f1;
+    font-size: 1.2em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+
+    img {
+        @apply w-full h-16 object-contain;
+    }
+
+    ul {
+        @apply grid grid-cols-8 w-full h-20;
+    }
+
+    li {
+        a {
+            @apply flex items-center justify-center h-full w-full p-2 transition duration;
+
+            &:hover {
+                background: $light-carbon;
+            }
+        }
+    }
+}

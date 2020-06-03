@@ -4,5 +4,9 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Tailwind
+@import "tailwind.css";                 // remove in production
+// @import "~tailwindcss/base.css";     // Uncomment in production
+
+// Components
+@import "components/navbar";
