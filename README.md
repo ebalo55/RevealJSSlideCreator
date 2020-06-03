@@ -1,8 +1,6 @@
 <p align="center"><img src="https://github.com/ebalo55/RevealJSSlideCreator/blob/master/storage/app/public/logo-complete.png" width="400"></p>
 
-<p align="center">
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-</p>
 
 ## About Laravel
 
