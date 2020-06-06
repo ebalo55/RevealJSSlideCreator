@@ -30,10 +30,22 @@
     font-family: $font-family-sans-serif;
 }
 
+// FontAwesome
+@import "libraries/FontAwesome/fontawesome";
+@import "libraries/FontAwesome/solid.scss";
+@import "libraries/FontAwesome/brands.scss";
+$fa-font-path: "/webfonts";
+
+@import "icons";
+
 // Components
 @import "components/navbar";
 @import "components/banner";
 @import "components/footer";
+@import "components/checkbox";
+
+// Pages
+@import "pages/registration";
 
 main {
     @apply px-56 my-8;

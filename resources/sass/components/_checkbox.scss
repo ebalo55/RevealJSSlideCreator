@@ -1,0 +1,55 @@
+/*!
+ *   Reveal JS Slide Creator
+ *   Copyright (C) 2020  ebalo <webdev.ebalo@gmail.com>
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+%checkbox-icon {
+    @apply absolute transition duration;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: .7em;
+}
+
+.checkbox-wrapper {
+    @apply ml-5 mt-4 flex items-center;
+
+    input[type="checkbox"] {
+        @apply appearance-none w-4 h-4 p-1 border border-gray-400 rounded transition duration bg-white ml-0 mr-4 cursor-pointer relative;
+
+        &:hover {
+            @apply bg-white border-gray-400;
+            @extend %check;
+
+            &:before {
+                @extend %checkbox-icon;
+                opacity: .5;
+            }
+        }
+        &:checked {
+            @extend %check;
+
+            &:before {
+                @extend %checkbox-icon;
+            }
+        }
+    }
+
+    label {
+        @apply m-0 #{!important};
+        @apply w-full cursor-pointer;
+    }
+}

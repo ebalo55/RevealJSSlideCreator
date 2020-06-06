@@ -27,7 +27,6 @@
     <title>@yield("title")</title>
 
     <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/c94d66e405.js" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -37,6 +36,11 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ asset("storage/favicon.ico") }}">
+
+    @if(Route::currentRouteNamed(["register", "login"]))
+        <link rel="stylesheet" href="{{ asset("storage/reveal.css") }}">
+        <link rel="stylesheet" href="{{ asset("storage/theme/white.css") }}">
+    @endif
 </head>
 <body>
     <div id="app">

@@ -47,5 +47,10 @@ let app;
 window.onload = () => {
     app = new Vue({
         el: '#app',
+        data: {
+            console: window.console
+        }
     });
 }
+
+import Reveal from 'reveal.js';

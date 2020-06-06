@@ -1,0 +1,78 @@
+/*!
+ *   Reveal JS Slide Creator
+ *   Copyright (C) 2020  ebalo <webdev.ebalo@gmail.com>
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+.registration {
+    @apply flex h-screen relative;
+
+    form {
+        @apply absolute w-1/4 flex flex-col;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &:before {
+            content: "";
+            @apply absolute h-full w-full;
+            background: rgba(white, .75);
+            z-index: -1;
+        }
+
+        h2 {
+            @apply mx-auto text-4xl font-semibold p-3;
+        }
+
+        label {
+            @apply ml-4 mt-4 mb-1 text-sm font-bold cursor-pointer;
+            color: $light-carbon;
+        }
+
+        input {
+            @apply appearance-none outline-none px-2 py-1 border border-gray-400 rounded mx-4;
+
+            &.is-invalid {
+                box-shadow: 0 0 6px 3px $red;
+            }
+
+            &[type="submit"] {
+                @apply bg-transparent px-3 py-2 mx-auto my-4 transition duration cursor-pointer;
+                background: rgba(white, .5);
+
+                &:hover, &:focus {
+                    background: rgba(white, .8);
+                }
+            }
+        }
+
+        .invalid-feedback {
+            @apply my-1 mx-4;
+            color: $red;
+        }
+
+        .login-ref {
+            @apply mx-auto mb-4;
+
+            a {
+                @apply text-blue-500 transition duration;
+
+                &:hover {
+                    @apply text-blue-700;
+                }
+            }
+        }
+    }
+}

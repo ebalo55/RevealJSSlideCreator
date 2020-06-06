@@ -28,6 +28,7 @@
     "dependencies": {
         "laravel-echo": "^1.8.0",
         "pusher-js": "^6.0.3",
+        "reveal.js": "^4.0.2",
         "tailwindcss": "^1.4.6"
     }
 }
