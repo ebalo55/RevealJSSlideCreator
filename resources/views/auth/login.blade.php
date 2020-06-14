@@ -32,14 +32,12 @@
                 </span>
             @enderror
 
-            <checkbox name="remember" id="remember" :state="{{ old('remember') ? "true" : "false" }}" @change="(value) => console.log(value)">
+            <checkbox name="remember" id="remember" :state="{{ old('remember') ? "true" : "false" }}">
                 {{ __('Remember Me') }}
             </checkbox>
 
             <input type="submit" value="{{ __('Login') }}">
-            @if (Route::has('password.request'))
-                <span class="login-ref"><a href="{{ route('password.request') }}">Forgot your password?</a></span>
-            @endif
+            <span class="login-ref"><a href="{{ route('password.request') }}">Forgot your password?</a></span>
             <span class="login-ref">Not registered yet? <a href="{{ route("register") }}">Register now!</a></span>
         </form>
     </div>

@@ -16,52 +16,38 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+.default-form {
+    @apply w-1/2 mx-auto flex flex-col;
 
-// Variables
-@import 'variables';
+    h2 {
+        @apply mx-auto text-4xl font-semibold p-3;
+    }
 
-// Tailwind
-@import "tailwind.css";                 // remove in production
-// @import "~tailwindcss/base.css";     // Uncomment in production
+    label {
+        @apply ml-4 mt-4 mb-1 text-sm font-bold cursor-pointer;
+        color: $light-carbon;
+    }
 
-* {
-    font-family: $font-family-sans-serif;
-}
+    input {
+        @apply appearance-none outline-none px-2 py-1 border border-gray-400 rounded mx-4;
 
-// FontAwesome
-@import "libraries/FontAwesome/fontawesome";
-@import "libraries/FontAwesome/solid.scss";
-@import "libraries/FontAwesome/brands.scss";
-$fa-font-path: "/webfonts";
-
-@import "icons";
-
-// Components
-@import "components/navbar";
-@import "components/banner";
-@import "components/footer";
-@import "components/checkbox";
-@import "components/default_form";
-@import "components/alert";
-
-// Pages
-@import "pages/registration";
-
-main {
-    @apply px-56 my-8;
-
-    section {
-        @apply py-4;
-
-        h2 {
-            @apply font-semibold text-3xl;
+        &.is-invalid {
+            box-shadow: 0 0 6px 3px $red;
         }
 
-        p {
-            @apply text-xl;
+        &[type="submit"] {
+            @apply px-3 py-2 mx-auto my-4 transition duration cursor-pointer;
+            border-color: initial;
         }
+    }
+
+    .invalid-feedback {
+        @apply my-1 mx-4;
+        color: $red;
+    }
+
+    .ref {
+        @apply mx-auto mb-4;
 
         a {
             @apply text-blue-500 transition duration;
