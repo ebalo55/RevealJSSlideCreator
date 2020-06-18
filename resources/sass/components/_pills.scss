@@ -16,22 +16,13 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-@mixin icon($name, $prefix: "") {
-    @if($prefix == fab) {
-        @extend .fab;
-    }
-    @else {
-        @extend .fas;
-    }
+.pill {
+    @apply text-gray-100 font-bold rounded-full px-3 py-1 mr-auto mt-auto capitalize;
 
-    &:before {
-        content: fa-content($name);
+    &-success {
+        @apply bg-green-500;
+    }
+    &-info {
+        @apply bg-blue-500;
     }
 }
-
-%check { @include icon($fa-var-check); }
-.edit { @include icon($fa-var-pen); }
-.private { @include icon($fa-var-lock); }
-.public { @include icon($fa-var-lock-open); }
-.trash { @include icon($fa-var-trash); }
-.share { @include icon($fa-var-share-alt); }

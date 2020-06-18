@@ -16,22 +16,38 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-@mixin icon($name, $prefix: "") {
-    @if($prefix == fab) {
-        @extend .fab;
-    }
-    @else {
-        @extend .fas;
+.presentation-wrapper {
+    @apply flex flex-col w-full my-4 rounded-l;
+    background-color: #fafafa;
+
+    .presentation {
+        @apply h-64 grid grid-cols-3;
+
+        .preview {
+            @apply flex flex-col h-64 p-4;
+
+            img {
+                @apply object-contain object-center w-full h-full;
+            }
+        }
+
+        .body {
+            @apply flex flex-col h-full p-4;
+
+            .title {
+                @apply text-2xl text-gray-900 font-semibold;
+            }
+            .info {
+                @apply font-bold text-gray-700 text-sm uppercase;
+            }
+        }
+
+        .menu-wrapper {
+            @apply h-full flex justify-end;
+        }
     }
 
-    &:before {
-        content: fa-content($name);
+    hr {
+        @apply mx-4;
     }
 }
-
-%check { @include icon($fa-var-check); }
-.edit { @include icon($fa-var-pen); }
-.private { @include icon($fa-var-lock); }
-.public { @include icon($fa-var-lock-open); }
-.trash { @include icon($fa-var-trash); }
-.share { @include icon($fa-var-share-alt); }

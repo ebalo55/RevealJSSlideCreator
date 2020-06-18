@@ -87060,6 +87060,11 @@ video {
 
 .fa,
 .fas,
+.share,
+.trash,
+.public,
+.private,
+.edit,
 .checkbox-wrapper input[type=checkbox]:checked,
 .checkbox-wrapper input[type=checkbox]:hover,
 .far,
@@ -87240,6 +87245,11 @@ video {
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
+.fa-pull-left.share,
+.fa-pull-left.trash,
+.fa-pull-left.public,
+.fa-pull-left.private,
+.fa-pull-left.edit,
 .checkbox-wrapper input.fa-pull-left[type=checkbox]:checked,
 .checkbox-wrapper input.fa-pull-left[type=checkbox]:hover,
 .far.fa-pull-left,
@@ -87250,6 +87260,11 @@ video {
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
+.fa-pull-right.share,
+.fa-pull-right.trash,
+.fa-pull-right.public,
+.fa-pull-right.private,
+.fa-pull-right.edit,
 .checkbox-wrapper input.fa-pull-right[type=checkbox]:checked,
 .checkbox-wrapper input.fa-pull-right[type=checkbox]:hover,
 .far.fa-pull-right,
@@ -93279,6 +93294,11 @@ readers do not read off random characters that represent icons */
 
 .fa,
 .fas,
+.share,
+.trash,
+.public,
+.private,
+.edit,
 .checkbox-wrapper input[type=checkbox]:checked,
 .checkbox-wrapper input[type=checkbox]:hover {
   font-family: "Font Awesome 5 Free";
@@ -93365,6 +93385,26 @@ readers do not read off random characters that represent icons */
 
 .checkbox-wrapper input[type=checkbox]:checked:before, .checkbox-wrapper input[type=checkbox]:hover:before {
   content: "\F00C";
+}
+
+.edit:before {
+  content: "\F304";
+}
+
+.private:before {
+  content: "\F023";
+}
+
+.public:before {
+  content: "\F3C1";
+}
+
+.trash:before {
+  content: "\F1F8";
+}
+
+.share:before {
+  content: "\F1E0";
 }
 
 /*!
@@ -93711,7 +93751,7 @@ readers do not read off random characters that represent icons */
   box-shadow: 0 0 6px 3px #e3342f;
 }
 
-.default-form input[type=submit] {
+.default-form input[type=submit], .default-form button {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
@@ -93723,6 +93763,7 @@ readers do not read off random characters that represent icons */
   transition-property: all;
   transition-duration: 500ms;
   cursor: pointer;
+  border-radius: 0.25rem;
   border-color: initial;
 }
 
@@ -93826,6 +93867,216 @@ readers do not read off random characters that represent icons */
   --text-opacity: 1;
   color: #000;
   color: rgba(0, 0, 0, var(--text-opacity));
+}
+
+/*!
+ *   Reveal JS Slide Creator
+ *   Copyright (C) 2020  ebalo <webdev.ebalo@gmail.com>
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+.pill {
+  --text-opacity: 1;
+  color: #f7fafc;
+  color: rgba(247, 250, 252, var(--text-opacity));
+  font-weight: 700;
+  border-radius: 9999px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: auto;
+  margin-top: auto;
+  text-transform: capitalize;
+}
+
+.pill-success {
+  --bg-opacity: 1;
+  background-color: #48bb78;
+  background-color: rgba(72, 187, 120, var(--bg-opacity));
+}
+
+.pill-info {
+  --bg-opacity: 1;
+  background-color: #4299e1;
+  background-color: rgba(66, 153, 225, var(--bg-opacity));
+}
+
+/*!
+ *   Reveal JS Slide Creator
+ *   Copyright (C) 2020  ebalo <webdev.ebalo@gmail.com>
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+.presentation-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  background-color: #fafafa;
+}
+
+.presentation-wrapper .presentation {
+  height: 16rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.presentation-wrapper .presentation .preview {
+  display: flex;
+  flex-direction: column;
+  height: 16rem;
+  padding: 1rem;
+}
+
+.presentation-wrapper .presentation .preview img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.presentation-wrapper .presentation .body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+}
+
+.presentation-wrapper .presentation .body .title {
+  font-size: 1.5rem;
+  --text-opacity: 1;
+  color: #1a202c;
+  color: rgba(26, 32, 44, var(--text-opacity));
+  font-weight: 600;
+}
+
+.presentation-wrapper .presentation .body .info {
+  font-weight: 700;
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.presentation-wrapper .presentation .menu-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.presentation-wrapper hr {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*!
+ *   Reveal JS Slide Creator
+ *   Copyright (C) 2020  ebalo <webdev.ebalo@gmail.com>
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+.menu {
+  --bg-opacity: 1;
+  background-color: #2d3748;
+  background-color: rgba(45, 55, 72, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #f7fafc;
+  color: rgba(247, 250, 252, var(--text-opacity));
+  font-size: 1.125rem;
+  display: grid;
+  grid-row-gap: 0.25rem;
+  row-gap: 0.25rem;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  transition-property: all;
+  transition-duration: 500ms;
+}
+
+.menu .menu-item:hover {
+  --bg-opacity: 1;
+  background-color: #4a5568;
+  background-color: rgba(74, 85, 104, var(--bg-opacity));
+}
+
+.menu .menu-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  --text-opacity: 1;
+  color: #f7fafc;
+  color: rgba(247, 250, 252, var(--text-opacity));
+}
+
+.menu .menu-item a:hover {
+  --text-opacity: 1;
+  color: #edf2f7;
+  color: rgba(237, 242, 247, var(--text-opacity));
+}
+
+.menu .menu-item a .text {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.menu .menu-item hr {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 /*!

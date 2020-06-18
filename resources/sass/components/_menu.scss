@@ -16,22 +16,28 @@
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-@mixin icon($name, $prefix: "") {
-    @if($prefix == fab) {
-        @extend .fab;
-    }
-    @else {
-        @extend .fas;
-    }
+.menu {
+    @apply bg-gray-800 text-gray-100 text-lg grid row-gap-1 m-0 px-0 py-1;
 
-    &:before {
-        content: fa-content($name);
+    .menu-item {
+        @apply flex flex-col transition duration-500;
+        &:hover {
+            @apply bg-gray-700;
+        }
+
+        a {
+            @apply flex flex-col items-center justify-center h-full w-full px-3 text-gray-100;
+            &:hover {
+                @apply text-gray-200;
+            }
+
+            .text {
+                @apply text-sm mt-2;
+            }
+        }
+
+        hr {
+            @apply mx-1;
+        }
     }
 }
-
-%check { @include icon($fa-var-check); }
-.edit { @include icon($fa-var-pen); }
-.private { @include icon($fa-var-lock); }
-.public { @include icon($fa-var-lock-open); }
-.trash { @include icon($fa-var-trash); }
-.share { @include icon($fa-var-share-alt); }

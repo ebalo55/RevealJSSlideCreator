@@ -13,29 +13,28 @@
   -   GNU General Public License for more details.
   -
   -  You should have received a copy of the GNU General Public License
-  -   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 --}}
 
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <nav-bar :urls="{{ generateDashboardLinks() }}"></nav-bar>
+    <main>
+        <section>
+            <h2>Saved presentations</h2>
+            <presentation preview="https://via.placeholder.com/1000x500?text=Presentation+first+page"
+                  title="Presentation title" creation-date="01-01-1900" last-update="16-06-2020"
+                  :slide-number="12" id="test-id" :is-public="true"></presentation>
+            <presentation preview="https://via.placeholder.com/1000x500?text=Presentation+first+page"
+                  title="Presentation title" creation-date="01-01-1900" last-update="16-06-2020"
+                  :slide-number="12" id="test-id" :is-public="true"></presentation>
+            <presentation preview="https://via.placeholder.com/1000x500?text=Presentation+first+page"
+                  title="Presentation title" creation-date="01-01-1900" last-update="16-06-2020"
+                  :slide-number="12" id="test-id" :is-public="true"></presentation>
+            <presentation preview="https://via.placeholder.com/1000x500?text=Presentation+first+page"
+                  title="Presentation title" creation-date="01-01-1900" last-update="16-06-2020"
+                  :slide-number="12" id="test-id" :is-public="true"></presentation>
+        </section>
+    </main>
 @endsection

@@ -25,7 +25,7 @@
                 </a>
             </li>
             <li v-for="item in urls" :class="URLsPositionCheck(item)">
-                <a :href="item.href">{{ item.name }}</a>
+                <a :href="item.href" v-html="item.name"></a>
             </li>
         </ul>
     </nav>

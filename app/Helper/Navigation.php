@@ -48,7 +48,29 @@ if(!function_exists("generateNavigationLink")) {
             ];
         }
 
-
         return json_encode($result);
+    }
+}
+
+if(!function_exists("generateDashboardLinks")) {
+    function generateDashboardLinks() {
+        return json_encode([
+            [
+                "href" => '/',
+                "path" => asset("storage/logo-rev.png"),
+                "name" => 'Home'
+            ],
+            ["href" => '#', "name" => 'New'],
+            ["href" => '#', "name" => 'Settings'],
+            ["href" => '#', "name" => 'Profile', "col" => 7],
+            [
+                "href" => "javascript:document.getElementById('logout').submit()",
+                "name" =>  "
+                <form id='logout' method='post' action='" . route('logout') . "'>
+                    <input type='hidden' value='" . csrf_token() . "' name='_token'>
+                    Logout
+                </form>"
+            ],
+        ]);
     }
 }

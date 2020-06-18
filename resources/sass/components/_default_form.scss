@@ -34,11 +34,10 @@
         &.is-invalid {
             box-shadow: 0 0 6px 3px $red;
         }
-
-        &[type="submit"] {
-            @apply px-3 py-2 mx-auto my-4 transition duration cursor-pointer;
-            border-color: initial;
-        }
+    }
+    input[type="submit"], button {
+        @apply px-3 py-2 mx-auto my-4 transition duration cursor-pointer rounded;
+        border-color: initial;
     }
 
     .invalid-feedback {
